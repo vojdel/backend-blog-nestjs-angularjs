@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  backend:
+    image: node:18
+    container_name: backend
+    build: .
+    ports:
+      - "5000:3000"
+    volumes:
+      - .:/usr/src/app
+    command: npm run start
+
+  db:
+    image: mysql
+    container_name: mysqldb
+    ports:
+      - 3306:3306
