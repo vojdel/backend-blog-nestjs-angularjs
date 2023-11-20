@@ -1,5 +1,5 @@
 # Create image based on the official Node image from dockerhub
-FROM node:lts-buster
+FROM node:21-alpine
 
 # Create app directory
 WORKDIR /usr/src/app
